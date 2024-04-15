@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
+    <title>Order Confirmed</title>
+</head>
+
+<body>
+
+<header class="text-gray-600 body-font shadow">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <span class="ml-3 text-xl text-blue-600">REDOLENCE</span>
+    </a>
+  </div>
+</header>
+
+<div class="container flex justify-center items-center min-h-screen">
+
+    <div class="bg-white p-6 rounded-lg shadow-lg text-center ring-2 ring-blue-600">
+        <!-- Tick mark icon -->
+        <div class="mb-6 text-green-500">
+            <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+            </svg>
+        </div>
+
+        <!-- Thank you message -->
+        <h1 class="text-2xl font-bold mb-4">Thank you for your purchase!</h1>
+        <p>Your order has been confirmed.</p>
+
+        <!-- Return to home button -->
+        <button class="mt-6 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg" onclick="returnToHome()">
+            Return to Home
+        </button>
+    </div>
+</div>
+
+    <script>
+        // Function to handle returning to the home page
+        function returnToHome() {
+            window.location.href = "home.html";
+        }
+    </script>
+
+
+</body>
+
+</html>

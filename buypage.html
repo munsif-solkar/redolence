@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Buy Now</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    
+</head>
+
+<body>
+
+
+<header class="text-gray-600 body-font shadow">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <span class="ml-3 text-xl text-blue-600">REDOLENCE</span>
+    </a>
+  </div>
+</header>
+
+
+    <div class="container mx-auto p-6">
+        <h1 class="text-2xl font-bold mb-4">Buy Product</h1>
+        
+        <div id="product-details" class="bg-gray-100 p-6 rounded-lg mb-6">
+            <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+    <h2 class="text-xl font-semibold mb-4">Invoice</h2>
+    <!-- Display product image -->
+    <div class="flex items-center mb-4">
+        <img class="h-20 w-20 object-cover rounded-lg mr-4" src="https://sslimages.shoppersstop.com/sys-master/images/hab/h28/32285502242846/S24JPG32315_NoColour.jpg_230Wx334H" alt="Product Image" id="image">
+        <div>
+            <!-- Display product name and description -->
+            <h3 class="text-lg font-medium text-gray-900" id="title">Jean Paul Gaultier</h3>
+            <p class="text-gray-600" id="desc">An elegant woody amber trail capturing the charisma and power of a leader</p>
+        </div>
+    </div>
+    
+    <!-- Display price, quantity, and total -->
+    <div class="mb-4">
+        <div class="flex justify-between">
+            <span class="text-gray-700">Price:</span>
+            <span class="text-gray-900 font-semibold" id="price">$50.00</span>
+        </div>
+        <div class="flex justify-between">
+            <span class="text-gray-700">Quantity:</span>
+            <span class="text-gray-900 font-semibold">1</span>
+        </div>
+        <div class="flex justify-between">
+            <span class="text-gray-700">Total:</span>
+            <span class="text-gray-900 font-semibold" id="price2">$50.00</span>
+        </div>
+    </div>
+    
+    <!-- Add any other relevant details (e.g., taxes, discounts, shipping) -->
+    <div class="mb-4">
+   
+        <div class="flex justify-between">
+            <span class="text-gray-700">Shipping:</span>
+            <span class="text-gray-900 font-semibold">&#x20B9; 47</span>
+        </div>
+        <div class="flex justify-between">
+            <span class="text-gray-700">Total (with tax and shipping):</span>
+            <span class="text-gray-900 font-semibold">&#x20B9; 6545</span>
+        </div>
+    </div>
+</div>
+
+        </div>
+
+        <form id="buy-now-form" class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-xl font-semibold mb-4">Shipping Address</h2>
+            
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                <input type="text" id="name" name="name" required class="mt-1 p-2 block w-full border rounded-md shadow-sm">
+            </div>
+
+            <div class="mb-4">
+                <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+                <input type="text" id="address" name="address" required class="mt-1 p-2 block w-full border rounded-md shadow-sm">
+            </div>
+
+            <div class="mb-4">
+                <label for="city" class="block text-sm font-medium text-gray-700">City</label>
+                <input type="text" id="city" name="city" required class="mt-1 p-2 block w-full border rounded-md shadow-sm">
+            </div>
+
+            <div class="mb-4">
+                <label for="state" class="block text-sm font-medium text-gray-700">State</label>
+                <input type="text" id="state" name="state" required class="mt-1 p-2 block w-full border rounded-md shadow-sm">
+            </div>
+
+            <div class="mb-4">
+                <label for="zip" class="block text-sm font-medium text-gray-700">Zip Code</label>
+                <input type="text" id="zip" name="zip" required class="mt-1 p-2 block w-full border rounded-md shadow-sm">
+            </div>
+
+            <h2 class="text-xl font-semibold mb-4">Billing Details</h2>
+            
+            <div class="mb-4">
+                <label for="card-number" class="block text-sm font-medium text-gray-700">Card Number</label>
+                <input type="text" id="card-number" name="card-number" required class="mt-1 p-2 block w-full border rounded-md shadow-sm">
+            </div>
+
+            <div class="mb-4">
+                <label for="expiration-date" class="block text-sm font-medium text-gray-700">Expiration Date</label>
+                <input type="text" id="expiration-date" name="expiration-date" required class="mt-1 p-2 block w-full border rounded-md shadow-sm">
+            </div>
+
+            <div class="mb-4">
+                <label for="cvc" class="block text-sm font-medium text-gray-700">CVC</label>
+                <input type="text" id="cvc" name="cvc" required class="mt-1 p-2 block w-full border rounded-md shadow-sm">
+            </div>
+
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">Confirm Order</button>
+        </form>
+    </div>
+
+    <script>
+        // Function to render product details (already explained in previous answers)
+        function renderProductDetails() {
+            // Retrieve the product details from URL query parameters
+            const params = new URLSearchParams(window.location.search);
+            const imgSrc = params.get("image");
+            const productName = params.get("title");
+            const productDescription = params.get("desc");
+            const price = params.get("price")
+
+            // Get the product details container
+            document.querySelector('#image').setAttribute('src',imgSrc)
+            document.querySelector('#title').innerText = productName
+            document.querySelector('#desc').innerText = productDescription
+            document.querySelector('#price').innerText = price
+            document.querySelector('#price2').innerText = price
+
+        }
+
+        // Event listener to handle form submission
+        document.getElementById("buy-now-form").addEventListener("submit", function(event) {
+            // Prevent default form submission behavior
+            event.preventDefault();
+
+            // Get form data
+            const form = event.target;
+            const name = form.name.value;
+            const address = form.address.value;
+            const city = form.city.value;
+            const state = form.state.value;
+            const zip = form.zip.value;
+            const cardNumber = form["card-number"].value;
+            const expirationDate = form["expiration-date"].value;
+            constcvc = form.cvc.value;
+
+            // Perform validation and handle the order confirmation
+            // For simplicity, you might not perform complex validation here
+            if (cardNumber && expirationDate && cvc) {
+                // Process the order
+                // This can include sending data to a server or processing the payment
+                // alert("Order confirmed!\nThank you for your purchase, " + name + "!");
+
+                // Optionally, redirect the user to a thank you page or home page
+                window.location.href = "confirm.html";
+            } else {
+                // Show an alert for invalid input
+                alert("Please fill in all required fields correctly.");
+            }
+        });
+
+        // Call the function to render product details on page load
+        document.addEventListener("DOMContentLoaded", renderProductDetails);
+    </script>
+</body>
+
+</html>
+
