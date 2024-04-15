@@ -13,19 +13,13 @@
 <body>
 
 
-<header class="text-gray-600 body-font shadow">
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-      <span class="ml-3 text-xl text-blue-600">REDOLENCE</span>
-    </a>
-  </div>
-</header>
 
 
-    <div class="container mx-auto p-6">
-        <h1 class="text-2xl font-bold mb-4">Buy Product</h1>
+
+    <div class="container mx-auto p-1">
+        <h1 class="text-2xl font-bold mb-4 px-8 pt-8">Buy Product</h1>
         
-        <div id="product-details" class="bg-gray-100 p-6 rounded-lg mb-6">
+        <div id="product-details" class="p-2 rounded-lg mb-6">
             <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
     <h2 class="text-xl font-semibold mb-4">Invoice</h2>
     <!-- Display product image -->
@@ -34,7 +28,7 @@
         <div>
             <!-- Display product name and description -->
             <h3 class="text-lg font-medium text-gray-900" id="title">Jean Paul Gaultier</h3>
-            <p class="text-gray-600" id="desc">An elegant woody amber trail capturing the charisma and power of a leader</p>
+     
         </div>
     </div>
     
@@ -55,17 +49,7 @@
     </div>
     
     <!-- Add any other relevant details (e.g., taxes, discounts, shipping) -->
-    <div class="mb-4">
-   
-        <div class="flex justify-between">
-            <span class="text-gray-700">Shipping:</span>
-            <span class="text-gray-900 font-semibold">&#x20B9; 47</span>
-        </div>
-        <div class="flex justify-between">
-            <span class="text-gray-700">Total (with tax and shipping):</span>
-            <span class="text-gray-900 font-semibold">&#x20B9; 6545</span>
-        </div>
-    </div>
+
 </div>
 
         </div>
@@ -132,7 +116,7 @@
             // Get the product details container
             document.querySelector('#image').setAttribute('src',imgSrc)
             document.querySelector('#title').innerText = productName
-            document.querySelector('#desc').innerText = productDescription
+            // document.querySelector('#desc').innerText = productDescription
             document.querySelector('#price').innerText = price
             document.querySelector('#price2').innerText = price
 

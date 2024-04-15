@@ -12,14 +12,6 @@
 <body class="bg-gray-100">
 
 
-<header class="text-gray-600 body-font shadow">
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-           <span class="ml-3 text-xl text-blue-600">REDOLENCE</span>
-    </a>
-  </div>
-</header>
-
 
 
 
@@ -79,8 +71,9 @@
         // Save the updated users array back to local storage
         localStorage.setItem("users", JSON.stringify(users));
 
+  window.location.href = 'login.html'
 
-         alert("Account created successfully!");
+         // alert("Account created successfully!");
 
 
     

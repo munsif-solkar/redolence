@@ -12,18 +12,6 @@
 <body class="bg-gray-100">
 
 
-<header class="text-gray-600 body-font shadow">
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-      <span class="ml-3 text-xl text-blue-600">REDOLENCE</span>
-    </a>
-  </div>
-</header>
-
-
-
-
-
           <div class="container p-6 sm:p-8 ring-gray-600 ring-2">
               <h1 class="text-xl font-bold leading-tight tracking-tight text-blue-900 md:text-2xl dark:text-white mb-5">
                   Login
@@ -76,12 +64,12 @@
 
         // Provide feedback based on whether the user was found
         if (userFound) {
-            alert("Login successful!");
+            // alert("Login successful!");
             localStorage.setItem('username',email)
             // Optionally, navigate the user to another page, e.g., the home page
             window.location.href = "home.html";
         } else {
-            alert("Invalid email or password. Please try again.");
+            // alert("Invalid email or password. Please try again.");
         }
 
   }
